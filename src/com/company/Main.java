@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args)
     {
-        Assignment1 a1 = new Assignment1();
-        a1.Run();
+        Exercise4 e = new Exercise4();
+        e.Run();
     }
 }
