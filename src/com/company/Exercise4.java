@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Exercise4
 {
-    private ArrayList<CityData> cityDataList = new ArrayList<>();
+    /*private ArrayList<CityData> cityDataList = new ArrayList<>();
 
     public void Run()
     {
@@ -43,5 +43,5 @@ public class Exercise4
             float average = cityDataList.get(i).GetAverageTemperature();
             System.out.println("Average Temp in "+cityDataList.get(i).name+" is "+average);
         }
-    }
+    }*/
 }

@@ -5,9 +5,9 @@ public class Main {
 
     public static void main(String[] args)
     {
-        UserInput ui = new UserInput();
-        ui.promptString("Enter a valid String");
-        ui.promptInt("Enter a valid Int");
-        ui.promptDouble("Enter a valid Double");
+        ContactInformation ci = new ContactInformation("Bob","Bob@gmail.com");
+        ci.Display();
+        BuisnessContactInformation bci = new BuisnessContactInformation("Bob","Bob@gmail.com","614-333-4444");
+        bci.Display();
     }
 }
