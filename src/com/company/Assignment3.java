@@ -1,12 +1,12 @@
 package com.company;
 import java.util.*;
 import java.util.Scanner;
+
 /**
- * Created by alexfeike on 2/11/16.
+ * Created by alexfeike on 4/12/16.
  */
-public class Assignment2
+public class Assignment3
 {
-    /*
     private ArrayList<ToDoItem> taskList = new ArrayList<ToDoItem>();
     private Scanner choiceReader = new Scanner(System.in);
     private Scanner priorityReader = new Scanner(System.in);
@@ -59,10 +59,10 @@ public class Assignment2
         for(int i=0;i<taskList.size();i++)
         {
             ToDoItem t = taskList.get(i);
-            if(t.priority!=priority)
+            if(t.getPriority()!=priority)
                 continue;
-            System.out.println(t.name);
-            System.out.println(t.description);
+            System.out.println(t.getName());
+            System.out.println(t.getDescription());
             System.out.println();
         }
     }
@@ -71,8 +71,8 @@ public class Assignment2
         for(int i=0;i<taskList.size();i++)
         {
             ToDoItem t = taskList.get(i);
-            System.out.println(t.name);
-            System.out.println(t.description);
+            System.out.println(t.getName());
+            System.out.println(t.getDescription());
             System.out.println();
         }
     }
@@ -94,7 +94,7 @@ public class Assignment2
         String name = nameReader.nextLine();
         for(int i=0;i<taskList.size();i++)
         {
-            if(taskList.get(i).name.equals(name))
+            if(taskList.get(i).getName().equals(name))
             {
                 taskList.remove(i);
                 System.out.println("Removed task "+name);
@@ -109,7 +109,7 @@ public class Assignment2
         String name = nameReader.nextLine();
         for(int i=0;i<taskList.size();i++)
         {
-            if(taskList.get(i).name.equals(name))
+            if(taskList.get(i).getName().equals(name))
             {
                 System.out.println("Enter Name");
                 String n = nameReader.nextLine();
@@ -118,14 +118,14 @@ public class Assignment2
                 System.out.println("Enter Priority");
                 int priority=priorityReader.nextInt();
 
-                taskList.get(i).name = n;
-                taskList.get(i).description = description;
-                taskList.get(i).priority = priority;
+                taskList.get(i).setName(n);
+                taskList.get(i).setDescription(description);
+                taskList.get(i).setPriority(priority);
 
                 System.out.println("Updated task "+n);
                 return;
             }
         }
         System.out.println("Could not find Task");
-    }*/
+    }
 }
