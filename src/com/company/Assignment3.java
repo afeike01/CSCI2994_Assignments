@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class Assignment3
 {
-    private ArrayList<ToDoItem> taskList = new ArrayList<ToDoItem>();
+    private ToDoItemCollection taskList = new ToDoItemCollection();
     private Scanner choiceReader = new Scanner(System.in);
     private Scanner priorityReader = new Scanner(System.in);
     private Scanner nameReader = new Scanner(System.in);
@@ -56,23 +56,21 @@ public class Assignment3
         System.out.println("Enter priority to print");
         int priority = priorityReader.nextInt();
         priority = priority >=0 && priority <6 ? priority : priority<0 ? 0 : 5;
-        for(int i=0;i<taskList.size();i++)
+        for(ToDoItem item : taskList)
         {
-            ToDoItem t = taskList.get(i);
-            if(t.getPriority()!=priority)
+            if(item.getPriority()!=priority)
                 continue;
-            System.out.println(t.getName());
-            System.out.println(t.getDescription());
+            System.out.println(item.getName());
+            System.out.println(item.getDescription());
             System.out.println();
         }
     }
     private void PrintTaskList()
     {
-        for(int i=0;i<taskList.size();i++)
+        for(ToDoItem item : taskList)
         {
-            ToDoItem t = taskList.get(i);
-            System.out.println(t.getName());
-            System.out.println(t.getDescription());
+            System.out.println(item.getName());
+            System.out.println(item.getDescription());
             System.out.println();
         }
     }
@@ -92,11 +90,11 @@ public class Assignment3
     {
         System.out.println("Enter name of task to remove");
         String name = nameReader.nextLine();
-        for(int i=0;i<taskList.size();i++)
+        for(ToDoItem item : taskList)
         {
-            if(taskList.get(i).getName().equals(name))
+            if(item.getName().equals(name))
             {
-                taskList.remove(i);
+                taskList.remove(name);
                 System.out.println("Removed task "+name);
                 return;
             }
@@ -107,9 +105,9 @@ public class Assignment3
     {
         System.out.println("Enter name of task to update");
         String name = nameReader.nextLine();
-        for(int i=0;i<taskList.size();i++)
+        for(ToDoItem item : taskList)
         {
-            if(taskList.get(i).getName().equals(name))
+            if(item.getName().equals(name))
             {
                 System.out.println("Enter Name");
                 String n = nameReader.nextLine();
@@ -118,9 +116,9 @@ public class Assignment3
                 System.out.println("Enter Priority");
                 int priority=priorityReader.nextInt();
 
-                taskList.get(i).setName(n);
-                taskList.get(i).setDescription(description);
-                taskList.get(i).setPriority(priority);
+                item.setName(n);
+                item.setDescription(description);
+                item.setPriority(priority);
 
                 System.out.println("Updated task "+n);
                 return;
