@@ -1,13 +1,18 @@
 package com.company;
-
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args)
     {
-        WorkContact wc = new WorkContact("Melissa","melissa@gmail.com");
-        HomeContact hc = new HomeContact("Bruce","614-222-5555");
-        wc.contact();
-        hc.contact();
+        ArrayList<Contact> contacts = new ArrayList<Contact>();
+        contacts.add(new WorkContact("Melissa","melissa@gmail.com"));
+        contacts.add(new HomeContact("Bruce","614-222-5555"));
+
+        for(Contact c : contacts)
+        {
+            c.contact();
+        }
+
     }
 }
