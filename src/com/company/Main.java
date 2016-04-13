@@ -5,9 +5,9 @@ public class Main {
 
     public static void main(String[] args)
     {
-        /*
-        //Exercise
-        ArrayList<Contact> contacts = new ArrayList<Contact>();
+
+        //Exercise #10
+        /*IterableContactCollection contacts = new IterableContactCollection();
         contacts.add(new WorkContact("Melissa","melissa@gmail.com"));
         contacts.add(new HomeContact("Bruce","614-222-5555"));
 

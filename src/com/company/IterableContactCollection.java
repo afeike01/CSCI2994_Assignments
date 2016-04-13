@@ -12,4 +12,5 @@ public class IterableContactCollection implements Iterable<Contact>
     {
         return contacts.iterator();
     }
+    public void add(Contact c){contacts.add(c);}
 }
