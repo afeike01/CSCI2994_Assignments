@@ -17,7 +17,29 @@ public class Main {
         }*/
 
         //Assignment 3
-        Assignment3 assignment3 = new Assignment3();
-        assignment3.Run();
+        //Assignment3 assignment3 = new Assignment3();
+        //assignment3.Run();
+
+        //Exercise #11
+        System.out.println("Main:  Creating Objects");
+        WeatherStation localWeatherStation = new WeatherStation();
+
+        TemperatureSensor temperatureSensor = new TemperatureSensor();
+        HumiditySensor humiditySensor = new HumiditySensor();
+        PressureSensor pressureSensor = new PressureSensor();
+
+        temperatureSensor.addListener(localWeatherStation);
+        humiditySensor.addListener(localWeatherStation);
+        pressureSensor.addListener(localWeatherStation);
+
+        System.out.println("Main:  Simulating updates from sensors");
+        temperatureSensor.update();
+        humiditySensor.update();
+        temperatureSensor.update();
+        pressureSensor.update();
+
+        System.out.println("Main:  displaying report and logs");
+        localWeatherStation.displayCurrentWeather();
+        localWeatherStation.displayLog();
     }
 }
