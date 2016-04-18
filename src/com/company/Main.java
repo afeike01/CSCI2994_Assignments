@@ -21,6 +21,7 @@ public class Main {
         //assignment3.Run();
 
         //Exercise #11
+        /*
         System.out.println("Main:  Creating Objects");
         WeatherStation localWeatherStation = new WeatherStation();
 
@@ -40,6 +41,22 @@ public class Main {
 
         System.out.println("Main:  displaying report and logs");
         localWeatherStation.displayCurrentWeather();
-        localWeatherStation.displayLog();
+        localWeatherStation.displayLog();*/
+
+        //Exercise #12
+        Queue<String> stringQueue = new Queue<String>(3);
+        try
+        {
+            stringQueue.enqueue("Hello");
+            stringQueue.enqueue("World");
+            stringQueue.enqueue("HelloWorld");
+            System.out.println(stringQueue.dequeue());
+            System.out.println(stringQueue.dequeue());
+            System.out.println(stringQueue.dequeue());
+        }
+        catch(QueueFullException | QueueEmptyException e)
+        {
+            e.printStackTrace();
+        }
     }
 }
